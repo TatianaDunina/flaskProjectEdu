@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    background-color: #483053;
+    font-family: "Manrope", sans-serif;
+}
+
+
+h1 {
+    color: #f7f8da;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+form, .main-content {
+    margin: 50px auto;
+    padding: 20px;
+    width: 400px;
+    border: 5px dashed #c868f1;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    color: #f7f8da;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+input[type="text"],
+input[type="email"] {
+    outline: none;
+    font-size: 1.5em;
+    padding: 0 20px;
+    line-height: 50px;
+    border-radius: 10px;
+    border: 2px solid #c868f1;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background: #c868f1;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border: 2px solid #f7f8da;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid {
+    color: #f7f8da;
+}
+
+
+button {
+    background-color: #c868f1;
+    color: #f7f8da;
+    border: none;
+    padding: 15px 40px;
+    margin: 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+
+button:active {
+    transform: scale(0.97);
+}
+
+a {
+    color: #c868f1;
+}
