@@ -1,24 +1,19 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, flash
 from app import app
 
+app.config['SECRET_KEY'] = 'dfghdftyerstfgjdgykdghkcg'
 
 @app.route('/')
-def form():
-    return render_template('form.html')
+def home():
+    return render_template('index.html')
 
-@app.route('/submit', methods=['POST', 'GET'])
-def submit():
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact', methods=['POST', 'GET'])
+def contact():
     if request.method == 'POST':
-        name = request.form.get('name')
-        email = request.form.get('email')
-        color = request.form.get('color')
-        profession = request.form.get('profession')
-        hobbies = request.form.getlist('hobbies')
-        age = request.form.get('age')
+        flash('Your message has been sent successfully!')
 
-        return render_template('result.html',
-                               name=name, email=email, color=color,
-                               profession=profession, hobbies=hobbies,
-                               age=age)
-    else:
-        return redirect(url_for('form'))
+    return render_template('contact.html')
